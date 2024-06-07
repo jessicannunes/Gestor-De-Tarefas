@@ -29,6 +29,8 @@ export class TaskService {
 
   // adicionar uma tarefa
   public addTask(task: Task): void{
+
+    task.id = this.tasks.length + 1;
     this.tasks.push(task);
   }
 
