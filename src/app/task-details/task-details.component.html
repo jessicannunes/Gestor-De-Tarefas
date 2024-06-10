@@ -1,1 +1,13 @@
-<p>task-details works!</p>
+<div class="container">
+
+    <h2>{{task!.name}}</h2>
+    <p class="status">Status:{{task?.completed? 'Concluida' : 'Pendente'}}</p>
+
+</div>
+
+<div>
+    <h2>Descrição</h2>
+    <textarea [(ngModel)]="task!.description"></textarea>
+    <button class="saveButtom" (click)="save()">Salvar</button>
+    <button class="cancelButton" (click)="cancel()">Cancelar</button>
+</div>
